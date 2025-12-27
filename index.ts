@@ -12,15 +12,16 @@ const emojiToCodePoint = (emoji: string) => {
 };
 
 const getEmojiCode = (catagory: string, emojiName: string) => {
-  const formatEmojiName = emojiName.replaceAll(" ", "_").toLowerCase();
+  const formatEmojiName = emojiName.toLowerCase();
   for (const e of gemoji) {
-    if (catagory === e.category && formatEmojiName === e.names[0]) {
+    if (catagory === e.category && formatEmojiName === e.description) {
       const emoji = e.emoji;
       const codePoint = emojiToCodePoint(
         emoji.indexOf(String.fromCharCode(0x200d)) < 0
           ? emoji.replace(/\uFE0F/g, "")
           : emoji
       );
+
       return codePoint;
     }
   }
