@@ -1,0 +1,16 @@
+{
+  "name": "telegram-animated-emojis",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "emoji-regex": "^10.6.0",
+    "gemoji": "^8.1.0"
+  }
+}
